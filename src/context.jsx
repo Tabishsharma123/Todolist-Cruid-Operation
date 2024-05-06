@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Context = () => {
   const [todos, setTodos] = useState([]);
@@ -31,7 +31,6 @@ const Context = () => {
         <button onClick={addtodo}>add</button>
         <ul>
           {todos.map((todo, index) => {
-            console.log(todo);
             return (
               <li key={index}>
                 {todo}
